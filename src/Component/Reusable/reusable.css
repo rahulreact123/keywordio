@@ -1,0 +1,25 @@
+/* --- Navbar start -------- */
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.nav-links>li {
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+}
+
+
+/* ----------Navbar end ----------- */
