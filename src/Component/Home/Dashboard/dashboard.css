@@ -1,0 +1,49 @@
+.dashboard-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.table_container{
+  /* border: 1px solid red; */
+  flex-basis: 50%;
+  background-color: white;
+}
+.chart-container{
+  flex-basis: 50%;
+  border: 1px solid green;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(128, 128, 128, 0.607);
+  /* border-radius: 10px; */
+  /* background-color: white; */
+}
+.sts{
+  padding: 8px;
+}
+
+th, td {
+  border-bottom: 1px solid black;
+  /* border-right: 1px solid black; */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+  /* font-size: 12px; */
+}
+td{
+  font-size: 14px;
+  color: gray;
+}
+.up{
+  font-size: 8px !important;
+}
+.t-heading > th{
+  cursor: "pointer";
+  font-size: 14px;
+  /* background-color: r; */
+}

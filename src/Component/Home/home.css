@@ -1,4 +1,6 @@
 .home-container{
     background-color: whitesmoke;
-    margin: 20px 30px;
+    padding: 20px 30px;
+    height: 90vh;
+    /* background-color: red; */
 }
