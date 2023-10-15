@@ -10,7 +10,8 @@
 }
 .chart-container {
   flex-basis: 50%;
-  border: 1px solid green;
+  background-color: white;
+  border: .5px solid gray;
 }
 
 table {
@@ -58,7 +59,7 @@ td {
 .toggle-btn {
   width: 100%;
   padding: 0 20px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   display: flex;
   justify-content: end;
   position: absolute;
@@ -129,3 +130,10 @@ td {
 }
 
 /* right box chart and table end -----------  */
+
+/* responsive  */
+@media (min-width:32px) and (max-width:425px){
+  .dashboard-container{
+    flex-direction: column;
+  }
+}

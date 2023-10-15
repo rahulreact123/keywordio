@@ -189,3 +189,40 @@ textarea{
 
 
 /*------- Text Ad end ---------- */
+
+/* Media start from here ------------ */
+.form-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.left-form{
+    flex-basis: 50%;
+}
+.right-form{
+    flex-basis: 50%;
+}
+.middle-form-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+}
+.middle-form-container > div{
+    flex-basis: 33%;
+
+}
+.business-btn-label{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.business-btn-label > div {
+    flex-basis: 50%;
+}
+.btn-containers{
+    display: flex;
+    justify-content: end;
+    padding: 20px 0;
+}
+/* media end ------------ */

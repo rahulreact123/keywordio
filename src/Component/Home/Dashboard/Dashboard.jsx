@@ -144,6 +144,33 @@ const Dashboard = () => {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
+  const handleConversion = () => {
+    const sortedData = [...userData].sort((a, b) => {
+      if (sortOrder === "asc") {
+        return a.conversions - b.conversions;
+      } else {
+        return b.conversions - a.conversions;
+      }
+    });
+    setUserData(sortedData);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+  };
+
+  const hanleRevnue = () => {
+    const sortedData = [...userData].sort((a, b) => {
+      if (sortOrder === "asc") {
+        return a.Revenue - b.Revenue;
+      } else {
+        return b.Revenue - a.Revenue;
+      }
+    });
+    setUserData(sortedData);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+  };
+  
+
+  
+
   useEffect(() => {
     updateChartData("Clicks");
   }, []);
@@ -169,30 +196,30 @@ const Dashboard = () => {
             <th style={{ cursor: "pointer" }} onClick={handleCostSort}>
               Cost <UnfoldMoreIcon className="up" />
             </th>
-            <th style={{ cursor: "pointer" }}>
+            <th style={{ cursor: "pointer" }} onClick={handleConversion}>
               Conversions <UnfoldMoreIcon className="up" />
             </th>
-            <th style={{ cursor: "pointer" }}>
+            <th style={{ cursor: "pointer" }} onClick={hanleRevnue}>
               Revenue <UnfoldMoreIcon className="up" />
             </th>
           </tr>
           {userData?.map((data, ind) => {
             return (
               <tr key={ind}>
-                <td>{data?.campaigns}</td>
-                <td>{data?.clicks}</td>
-                <td>{data?.cost}</td>
-                <td>{data?.conversions}</td>
-                <td>{data?.Revenue}</td>
+                <td>{data?.campaigns || ""}</td>
+                <td>{data?.clicks?.toLocaleString() || ""}</td>
+                <td><span>USD</span> {data?.cost?.toLocaleString() || ""}</td>
+                <td>{data?.conversions || ""}</td>
+                <td><span>USD</span> {data?.Revenue.toLocaleString() || ""}</td>
               </tr>
             );
           })}
-          <tr>
+          <tr style={{backgroundColor:"whitesmoke"}}>
             <td>Total</td>
-            <td>1145</td>
-            <td>USD 41383</td>
-            <td>80</td>
-            <td>USD 71782</td>
+            <td>21,232</td>
+            <td>USD 143,819</td>
+            <td>489</td>
+            <td>USD 1,455,274</td>
           </tr>
         </table>
       </div>
@@ -256,13 +283,13 @@ const Dashboard = () => {
                   <th></th>
                 </tr>
                 <tr className="t-heading">
-                  <th className="" onClick={handleSortName}>
+                  <th className="">
                     <span>Group</span> <UnfoldMoreIcon className="up" />
                   </th>
-                  <th style={{ cursor: "pointer" }} onClick={handleSort}>
+                  <th style={{ cursor: "pointer" }}>
                     Clicks <UnfoldMoreIcon className="up" />
                   </th>
-                  <th style={{ cursor: "pointer" }} onClick={handleCostSort}>
+                  <th style={{ cursor: "pointer" }} >
                     Cost <UnfoldMoreIcon className="up" />
                   </th>
                   <th style={{ cursor: "pointer" }}>
@@ -276,23 +303,23 @@ const Dashboard = () => {
                   return (
                     <tr key={ind}>
                       <td>{data?.group}</td>
-                      <td>{data?.clicks}</td>
+                      <td>{data?.clicks?.toLocaleString()}</td>
                       <td>
-                        <span>USD</span> {data?.cost}
+                        <span>USD</span> {data?.cost?.toLocaleString() }
                       </td>
                       <td>{data?.conversions}</td>
                       <td>
-                        <span>USD</span> {data?.Revenue}
+                        <span>USD</span> {data?.Revenue?.toLocaleString() }
                       </td>
                     </tr>
                   );
                 })}
-                <tr>
+                <tr style={{backgroundColor:"whitesmoke"}}>
                   <td>Total</td>
-                  <td>1145</td>
-                  <td>USD 41383</td>
+                  <td>1,145</td>
+                  <td>USD 41,383</td>
                   <td>80</td>
-                  <td>USD 71782</td>
+                  <td>USD 71,782</td>
                 </tr>
               </table>
             </div>

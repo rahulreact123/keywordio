@@ -3,40 +3,40 @@
         "campaigns": "Cosmetics",
         "clicks": 712,
         "cost": 4272,
-        "conversions": 2,
-        "Revenue": 6,
-        "Total": 72772
+        "conversions": 8,
+        "Revenue": 16568,
+        "Total": 16568
     },
     {
         "campaigns": "Serums",
         "clicks": 3961,
         "cost": 27331,
-        "conversions": 2,
-        "Revenue": 7,
-        "Total": 72772
+        "conversions": 115,
+        "Revenue": 362526,
+        "Total": 362526
     },
     {
         "campaigns": "Facewash",
         "clicks": 9462,
         "cost": 76831,
-        "conversions": 2,
-        "Revenue": 2,
+        "conversions": 123,
+        "Revenue": 266800,
         "Total": 72772
     },
     {
         "campaigns": "Shampoos",
         "clicks": 439,
         "cost": 2151,
-        "conversions": 2,
-        "Revenue": 2,
+        "conversions": 5,
+        "Revenue": 11029,
         "Total": 72772
     },
     {
         "campaigns": "Conditioners",
         "clicks": 1680,
         "cost": 3864,
-        "conversions": 89,
-        "Revenue": 2,
+        "conversions": 49,
+        "Revenue": 175245,
         "Total": 72772
     },
     {
@@ -44,7 +44,7 @@
         "clicks": 4978,
         "cost": 29370,
         "conversions": 189,
-        "Revenue": 2,
+        "Revenue": 623106,
         "Total": 72772
     }
 ]
